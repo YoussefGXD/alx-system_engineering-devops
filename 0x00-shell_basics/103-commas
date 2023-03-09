@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1aQ | awk '{gsub(/"/, ""); printf "%s%s", (/\/$/ ? $0 : $0","), NR%6==0?"\n":""}' | sed '$a\'
